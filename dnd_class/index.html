@@ -42,6 +42,25 @@
                 <p>Dungeons and Dragons is an expansive tabletop role-playing game where the only limit is the imagination of both you and the members of your party. However, the game can be intimidating starting out, especially with all of the character creation options. Here at D&D Classes, our goal is to make character creation easier by providing basic breakdowns of all playable classes. This will help provide players with a greater understanding needed for crafting an enjoyable character.</p>
             </section>
         </main>
+        <section class="subscribe">
+            <h2>Please subscribe to our newsletter to recieve updates on the website</h2>
+            <div id="feedback"></div>
+            <form action="/my-handling-form-page" method="post">  
+                <ul>
+                    <li>
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="user_name" />
+                    </li>
+                    <li>
+                        <label for="mail">E-mail:</label>
+                        <input type="email" id="mail" name="user_email" />
+                    </li>
+                    </li>
+                    <li class="button">
+                        <button type="submit">Subscribe</button>
+                    </li>
+                </ul>
+            </form>
         <footer>
             <p id="info">Dungeons and Dragons Classes &copy; 2022 - Conner Cobabe - WWD130-24</p>
             <p><a href="site-plan.html">Site Plan</a></p>
@@ -58,6 +77,16 @@
                 </a>
             </div>
         </footer>
+        <script>
+            const feedbackElement = document.getElementById('feedback');
+            const formElement = document.forms[0];
+            formElement.addEventListener('submit', function(e) {
+                e.preventDefault();
+                feedbackElement.innerHTML = 'Hello '+ formElement.user_name.value +'! Thank you for subscribing. We will email you with any updates this website recieves.';
+                feedbackElement.style.display = "block";
+                document.body.classList.toggle('moveDown');
+            });
+        </script>
     </div>
 </body>
 </html>

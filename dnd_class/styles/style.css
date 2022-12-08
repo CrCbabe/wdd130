@@ -137,12 +137,78 @@ main section img {
     box-shadow: 5px 5px 10px #6f7364;
     font-family: 'Merriweather', serif;
 }
+.subscribe {
+    background-color: #EA242A;
+    color: white;
+    margin: auto;
+    margin-top: 25px;
+    padding-top: 10px;
+    grid-column: 4/5;
+    grid-row: 10/11;
+}
+.subscribe h2 {
+    color: #DCCAA0
+}
+form {
+    margin: 0 auto;
+    width: 400px;
+    padding: 1em;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  form li + li {
+    margin-top: 1em;
+  }
+  label {
+    font-family: 'Merriweather', serif;
+    display: inline-block;
+    width: 90px;
+    text-align: right;
+  }
+  input,
+  textarea {
+    font: 1em serif;
+    width: 300px;
+    box-sizing: border-box;
+    border: 1px solid #999;
+  }
+  input:focus,
+  textarea:focus {
+    border-color: #000;
+  }
+  textarea {
+    vertical-align: top;
+    height: 5em;
+  }
+  .button {
+    padding-left: 90px;
+  }
+  button {
+    margin-left: 0.5em;
+  }
+#feedback {
+    background-color: antiquewhite;
+    color: #BC3C3E;
+    position: relative;
+    text-align: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: .5em;
+    display: none;      
+}
+.moveDown {
+    margin-top: 3em;
+}
 .flip-card {
     background-color: transparent;
     width: 300px;
     height: 400px;
     border: 1px solid #f1f1f1;
-    margin-top: 20px;
+    margin-top: 40px;
     perspective: 1000px;
   }
   .flip-card-inner {
@@ -171,6 +237,8 @@ main section img {
     background-color: #EA242A;
     color: white;
     transform: rotateY(180deg);
+    padding: 15px;
+    font-size: .9em
   }
   .flip-card-back h2 {
     color: white;
